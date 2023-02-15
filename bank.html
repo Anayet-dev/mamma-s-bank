@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="px-4">
+    <header>
+        <h1 class="md:text-5xl text-4xl text-violet-500 text-center mt-10">Let's get some <span class="text-violet-600 font-semibold">Mooooney!!!</span></h1>
+    </header>
+
+    <main>
+        <section class="mt-12 text-white text-center">
+            <div class="grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:mb-4 mb-3 md:w-3/4 mx-auto">
+                <div class="bg-indigo-400 rounded md:p-8 p-2">
+                    <h4 class="md:text-2xl text-xl">Deposit</h4>
+                    <h2 class="md:text-5xl text-4xl md:mt-3 mt-2">$<span id="total-deposit">00</span></h2>
+                </div>
+                <div class="bg-teal-400	rounded md:p-8 p-2">
+                    <h4 class="md:text-2xl text-xl">Withdraw</h4>
+                    <h2 class="md:text-5xl text-4xl md:mt-3 mt-2">$<span id="total-withdraw">00</span></h2>
+                </div>
+            </div>
+            <div class="bg-violet-400 rounded md:p-8 p-2 w-1/2 mx-auto">
+                <h4 class="md:text-2xl text-xl">Balance</h4>
+                <h2 class="md:text-5xl text-4xl md:mt-3 mt-2">$<span id="balance">1200</span></h2>
+            </div>
+        </section>
+        <section class="mt-12">
+            <div class="grid grid-cols-2 gap-3 md:gap-4 md:w-3/4 mx-auto  text-white">
+                <div class="bg-indigo-400 rounded md:p-8 p-2">
+                    <h4 class="md:text-2xl text-xl">Please deposit</h4>
+                    <input class="my-3 text-black md:p-2 py-1 block w-36 md:w-3/4 rounded text-base" type="text" name="deposit" id="deposit" placeholder="$ Deposit amount">
+                    <button class="md:px-8 md:py-2 px-3 py-1 font-medium rounded bg-teal-400" id="btn-deposit">Deposit</button>
+                </div>
+                <div class="bg-teal-400	rounded md:p-8 p-2">
+                    <h4 class="md:text-2xl text-xl">Please withdraw</h4>
+                    <input class="my-3 text-black md:p-2 block w-36 py-1 md:w-3/4 rounded text-base" type="text" name="withdraw" id="withdraw" placeholder="$ Withdraw amount">
+                    <button class="md:px-8 md:py-2 px-3 py-1 font-medium rounded bg-indigo-400" id="btn-withdraw">Withdraw</button>
+                </div>
+            </div>
+            <p class="bg-yellow-300 mt-5 md:w-96 mx-auto py-2 font-semibold text-violet-900 hidden rounded text-center" id="error2">Wrong input or You don't have sufficient Balance</p>
+            <p class="bg-yellow-300 mt-5 md:w-72 mx-auto py-2 font-semibold text-violet-900 hidden rounded text-center" id="error1">Wrong input!</p>
+        </section>
+    </main>
+    <script src="js/utils.js"></script>
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+</html>
